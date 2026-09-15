@@ -15,7 +15,7 @@
 - [设置：标定](./setting/car/05_设置_标定界面设计.md)
 - [设置：对齐](./setting/align/07_设置_对齐界面设计.md)
 
-对齐页面预览图：`setting/align/align.svg`
+对齐页面预览图：`setting/align/align-pixel-matrix.svg`
 - [设置：设备与系统](./setting/dev/06_设置_设备与系统界面设计.md)
 
 ## 当前结果分析预览图
