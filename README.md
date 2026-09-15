@@ -15,7 +15,9 @@
 - [设置：标定](./setting/car/05_设置_标定界面设计.md)
 - [设置：对齐](./setting/align/07_设置_对齐界面设计.md)
 
-对齐页面预览图：`setting/align/align-pixel-matrix.svg`（源码） / `setting/align/align-pixel-matrix.png`（预览）
+对齐页面包含“一键标定”和“一键验证”两个独立硬件操作入口。
+
+对齐页面预览图：`setting/align/align-pixel-matrix-focus.svg`（源码） / `setting/align/align-pixel-matrix-focus.png`（预览）
 - [设置：设备与系统](./setting/dev/06_设置_设备与系统界面设计.md)
 
 ## 当前结果分析预览图
