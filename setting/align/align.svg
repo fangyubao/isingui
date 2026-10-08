@@ -1,170 +1,168 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1672" height="941" viewBox="0 0 1672 941">
 <defs>
-  <linearGradient id="page" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#e2eff8"/><stop offset="1" stop-color="#f2f8fc"/>
+  <linearGradient id="mainBg" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#f4faff"/><stop offset="1" stop-color="#f8fcff"/>
   </linearGradient>
-  <linearGradient id="primary" x1="0" y1="0" x2="1" y2="1">
-    <stop stop-color="#1477f3"/><stop offset="1" stop-color="#2f8cff"/>
+  <linearGradient id="blueBtn" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#1778f4"/><stop offset="1" stop-color="#2d8bff"/>
   </linearGradient>
   <linearGradient id="heat" x1="0" y1="1" x2="1" y2="0">
-    <stop offset="0" stop-color="#173db7"/><stop offset=".3" stop-color="#1db7e8"/>
-    <stop offset=".62" stop-color="#ffe04c"/><stop offset=".82" stop-color="#ff8a34"/><stop offset="1" stop-color="#d62f47"/>
+    <stop offset="0" stop-color="#1641b7"/><stop offset=".30" stop-color="#13b8e6"/>
+    <stop offset=".62" stop-color="#ffe14d"/><stop offset=".82" stop-color="#ff9234"/>
+    <stop offset="1" stop-color="#d83249"/>
   </linearGradient>
-  <linearGradient id="bar" x1="0" y1="1" x2="0" y2="0"><stop stop-color="#173db7"/><stop offset=".35" stop-color="#20b8e9"/><stop offset=".7" stop-color="#ffe04c"/><stop offset="1" stop-color="#d62f47"/></linearGradient>
-  <pattern id="grid" width="14" height="14" patternUnits="userSpaceOnUse">
-    <rect width="14" height="14" fill="#f0f5f9"/><path d="M14 0H0V14" fill="none" stroke="#fff" stroke-width="1"/>
+  <linearGradient id="heatBar" x1="0" y1="1" x2="0" y2="0">
+    <stop offset="0" stop-color="#1641b7"/><stop offset=".35" stop-color="#16b9e5"/>
+    <stop offset=".70" stop-color="#ffe14d"/><stop offset="1" stop-color="#d83249"/>
+  </linearGradient>
+  <pattern id="slmGrid" width="11" height="11" patternUnits="userSpaceOnUse">
+    <rect width="11" height="11" fill="#c6ddf8"/>
+    <path d="M11 0H0V11" fill="none" stroke="#f8fcff" stroke-width="1"/>
   </pattern>
-  <pattern id="slmMask" width="14" height="14" patternUnits="userSpaceOnUse">
-    <rect width="14" height="14" fill="#bcdcff"/><path d="M14 0H0V14" fill="none" stroke="#fff" stroke-width="1"/>
-  </pattern>
-  <pattern id="dmdMask" width="14" height="14" patternUnits="userSpaceOnUse">
-    <rect width="14" height="14" fill="#dfc9f6"/><path d="M14 0H0V14" fill="none" stroke="#fff" stroke-width="1"/>
+  <pattern id="dmdGrid" width="11" height="11" patternUnits="userSpaceOnUse">
+    <rect width="11" height="11" fill="#e2cff5"/>
+    <path d="M11 0H0V11" fill="none" stroke="#fffaff" stroke-width="1"/>
   </pattern>
   <pattern id="invalid" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
-    <rect width="8" height="8" fill="#f1f3f5"/><path d="M0 0V8" stroke="#d6dde5" stroke-width="3"/>
+    <rect width="8" height="8" fill="#f2f4f6"/><path d="M0 0V8" stroke="#d7dfe7" stroke-width="2.5"/>
   </pattern>
-  <filter id="shadow" x="-15%" y="-15%" width="130%" height="140%">
-    <feDropShadow dx="0" dy="3" stdDeviation="7" flood-color="#89a9c3" flood-opacity=".18"/>
-  </filter>
+  <clipPath id="sideClip"><rect x="120" y="62" width="226" height="826" rx="13"/></clipPath>
+  <clipPath id="slmClip"><rect x="407" y="220" width="574" height="210" rx="2"/></clipPath>
+  <clipPath id="dmdClip"><rect x="1040" y="220" width="574" height="210" rx="2"/></clipPath>
 </defs>
 
-<rect width="1672" height="941" fill="url(#page)"/>
-<rect x="0" y="0" width="1672" height="50" fill="#f6fbff"/>
+<!-- replace only the main content area; the original carb.png remains the shell -->
+<rect x="346" y="62" width="1314" height="826" fill="url(#mainBg)"/>
 
-<!-- global top bar -->
-<circle cx="43" cy="25" r="16" fill="#1477f3"/><circle cx="43" cy="25" r="8" fill="#bfe1ff"/>
-<path d="M43 9A16 16 0 0 1 59 25H43Z" fill="#fff"/>
-<text x="70" y="32" font-family="Arial,sans-serif" font-size="20" font-weight="700" fill="#102b5c">OptiQubo</text>
-<path d="M180 13v24" stroke="#9bb4cc"/><text x="204" y="32" font-family="Arial,'Noto Sans SC Thin',sans-serif" font-size="18" fill="#102b5c">设置</text>
-<text x="1393" y="33" font-family="Arial,sans-serif" font-size="24" fill="#102b5c">☼</text>
-<rect x="1427" y="13" width="45" height="24" rx="12" fill="#1477f3"/><circle cx="1460" cy="25" r="9" fill="#fff"/>
-<text x="1505" y="34" font-family="Arial,sans-serif" font-size="24" fill="#102b5c">⚙</text>
-<path d="M1556 25h18M1592 18v14h14V18M1640 17l14 16M1654 17l-14 16" stroke="#102b5c" stroke-width="2" fill="none"/>
-
-<!-- left global navigation -->
-<rect x="14" y="62" width="96" height="826" rx="15" fill="#f7fbfe" stroke="#d8e8f4" filter="url(#shadow)"/>
-<g font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" text-anchor="middle" fill="#102b5c">
-  <text x="62" y="111" font-size="30">⌂</text><text x="62" y="140" font-size="13">首页</text>
-  <text x="62" y="197" font-size="27">◇</text><text x="62" y="226" font-size="13">QUBO 求解</text>
-  <text x="62" y="286" font-size="28">♧</text><text x="62" y="315" font-size="13">经典求解</text>
-  <text x="62" y="376" font-size="28">▥</text><text x="62" y="405" font-size="13">结果分析</text>
+<!-- settings submenu rows, clipped to the original submenu panel -->
+<g clip-path="url(#sideClip)" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif">
+  <rect x="120" y="126" width="226" height="56" fill="#fbfdff"/>
+  <text x="151" y="161" font-size="16" fill="#173768">◎  标定</text>
+  <rect x="120" y="182" width="226" height="54" fill="#dcebff"/>
+  <rect x="132" y="182" width="5" height="54" rx="2.5" fill="#1477f3"/>
+  <text x="151" y="216" font-size="16" fill="#126cf3">◎  对齐</text>
+  <rect x="120" y="236" width="226" height="56" fill="#fbfdff"/>
+  <text x="151" y="271" font-size="16" fill="#173768">▣  设备与系统</text>
 </g>
-<rect x="17" y="464" width="90" height="92" rx="9" fill="#dcebff"/><rect x="17" y="464" width="5" height="92" rx="3" fill="#1477f3"/>
-<text x="62" y="505" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" fill="#1477f3">⚙</text>
-<text x="62" y="534" text-anchor="middle" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="13" fill="#1477f3">设置</text>
-<text x="62" y="852" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" fill="#102b5c">?</text>
-<text x="62" y="874" text-anchor="middle" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="12" fill="#102b5c">帮助</text>
 
-<!-- settings sub-navigation -->
-<rect x="120" y="62" width="260" height="826" rx="14" fill="#fbfdff" stroke="#d8e8f4" filter="url(#shadow)"/>
-<text x="150" y="104" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="21" font-weight="700" fill="#102b5c">⚙  设置</text>
-<text x="161" y="160" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="16" fill="#102b5c">◉  标定</text>
-<rect x="132" y="181" width="236" height="52" rx="8" fill="#dcebff"/><rect x="132" y="181" width="5" height="52" rx="3" fill="#1477f3"/>
-<text x="161" y="214" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="16" fill="#1477f3">◎  对齐</text>
-<text x="161" y="272" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="16" fill="#102b5c">▣  设备与系统</text>
+<!-- upper work card, same hierarchy as carb.png -->
+<rect x="356" y="62" width="1304" height="421" rx="12" fill="#fff" stroke="#d7e7f2"/>
+<text x="380" y="103" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="21" font-weight="700" fill="#102b5c">▦  SLM / DMD 对齐</text>
+<rect x="610" y="80" width="162" height="28" rx="14" fill="#e3f8eb"/>
+<circle cx="626" cy="94" r="5" fill="#14a44d"/>
+<text x="639" y="99" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="12" fill="#16844e">当前 LUT v3 · 已加载</text>
+<text x="785" y="99" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="12" fill="#5e7893">有效像素映射与选点预览</text>
 
-<!-- page header / actions -->
-<g transform="translate(-34,0)">
-<rect x="390" y="62" width="1268" height="70" rx="12" fill="#fff" stroke="#d5e6f2" filter="url(#shadow)"/>
-<text x="414" y="104" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="21" font-weight="700" fill="#102b5c">▦  SLM / DMD 对齐</text>
-<rect x="644" y="82" width="159" height="27" rx="14" fill="#e3f8eb"/><circle cx="659" cy="95" r="5" fill="#14a44d"/>
-<text x="671" y="100" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="12" fill="#16844e">当前方案 v3 · 已加载</text>
-<text x="817" y="101" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="12" fill="#5e7893">对齐映射表（LUT）</text>
-<rect x="1007" y="78" width="98" height="38" rx="6" fill="#fff" stroke="#b9d2e9"/>
-<text x="1021" y="102" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="13" fill="#126cf3">⇧  加载 LUT</text>
-<rect x="1114" y="78" width="126" height="38" rx="6" fill="url(#primary)"/>
-<text x="1127" y="102" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="13" fill="#fff">↻  更新对齐方案</text>
-<rect x="1249" y="78" width="145" height="38" rx="6" fill="#fff" stroke="#b9d2e9"/>
-<text x="1262" y="102" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="13" fill="#126cf3">▤  方案版本</text>
-<rect x="1403" y="78" width="119" height="38" rx="6" fill="#fff" stroke="#b9d2e9"/>
-<text x="1417" y="102" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="13" fill="#126cf3">☷  任务日志</text>
-<rect x="1531" y="78" width="102" height="38" rx="6" fill="#fff" stroke="#b9d2e9"/>
-<text x="1547" y="102" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="13" fill="#102b5c">⟳  视图复位</text>
+<rect x="1020" y="77" width="93" height="38" rx="6" fill="#fff" stroke="#b9d2e9"/>
+<text x="1033" y="101" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="13" fill="#126cf3">⇧  加载 LUT</text>
+<rect x="1120" y="77" width="135" height="38" rx="6" fill="url(#blueBtn)"/>
+<text x="1131" y="101" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="13" fill="#fff">↻  更新对齐方案</text>
+<rect x="1262" y="77" width="133" height="38" rx="6" fill="#fff" stroke="#b9d2e9"/>
+<text x="1275" y="101" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="13" fill="#126cf3">▤  方案版本</text>
+<rect x="1402" y="77" width="112" height="38" rx="6" fill="#fff" stroke="#b9d2e9"/>
+<text x="1415" y="101" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="13" fill="#126cf3">☷  任务日志</text>
+<rect x="1521" y="77" width="116" height="38" rx="6" fill="#fff" stroke="#b9d2e9"/>
+<text x="1535" y="101" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="13" fill="#173768">⟳  视图复位</text>
 
-<!-- upper mapping workspace -->
-<rect x="390" y="144" width="1268" height="485" rx="12" fill="#fff" stroke="#d5e6f2" filter="url(#shadow)"/>
-
-<!-- SLM card -->
-<rect x="406" y="158" width="616" height="457" rx="9" fill="#fbfdff" stroke="#d8e7f2"/>
-<text x="428" y="190" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="18" font-weight="700" fill="#102b5c">SLM 像素矩阵</text>
-<rect x="428" y="201" width="117" height="24" rx="12" fill="#e5f0ff"/><text x="444" y="218" font-family="Arial,sans-serif" font-size="12" fill="#126cf3">4096 × 2160</text>
-<text x="557" y="217" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="12" fill="#5e7893">有效 82.6% · 概览聚合</text>
-<rect x="820" y="198" width="75" height="27" rx="5" fill="#fff" stroke="#c0d4e6"/><text x="831" y="217" font-family="Arial,sans-serif" font-size="12" fill="#102b5c">x,y 跳转</text>
-<rect x="902" y="198" width="26" height="27" rx="5" fill="#fff" stroke="#c0d4e6"/><text x="909" y="217" font-family="Arial,sans-serif" font-size="15" fill="#126cf3">＋</text>
-<rect x="933" y="198" width="26" height="27" rx="5" fill="#fff" stroke="#c0d4e6"/><text x="941" y="217" font-family="Arial,sans-serif" font-size="15" fill="#126cf3">−</text>
-<rect x="964" y="198" width="40" height="27" rx="5" fill="#fff" stroke="#c0d4e6"/><text x="971" y="217" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="11" fill="#102b5c">适应</text>
-<rect x="428" y="236" width="572" height="313" rx="5" fill="url(#grid)" stroke="#b9cddd"/>
-<path d="M447 252H981V533H447Z" fill="url(#slmMask)" opacity=".84"/><path d="M447 252H981V533H447Z" fill="none" stroke="#4698ff" stroke-width="2"/>
-<rect x="447" y="252" width="69" height="42" fill="url(#invalid)"/><rect x="906" y="491" width="75" height="42" fill="url(#invalid)"/>
-<rect x="619" y="371" width="14" height="14" fill="#f1f3f5"/><rect x="800" y="432" width="14" height="14" fill="#f1f3f5"/>
-<rect x="704" y="390" width="16" height="16" fill="#ff9d3f" stroke="#ec6b00" stroke-width="2"/><rect x="701" y="387" width="22" height="22" fill="none" stroke="#fff" stroke-width="2"/>
-<rect x="761" y="302" width="109" height="76" rx="5" fill="#fff" stroke="#126cf3" stroke-width="2"/><rect x="772" y="313" width="87" height="54" fill="#bcdcff"/><path d="M772 313h87v54h-87z" fill="none" stroke="#4698ff"/><rect x="808" y="333" width="13" height="13" fill="#ff9d3f" stroke="#ec6b00" stroke-width="2"/><text x="772" y="391" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="10" fill="#5e7893">3×3 局部放大镜</text>
-<text x="428" y="575" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="12" fill="#5e7893">视口 x=768–3328，y=384–1776　滚轮缩放 · 拖拽平移 · 点击反算真实像素</text>
-<text x="428" y="596" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="12" fill="#102b5c">当前 (1452,704)　↔ DMD (1417,812)　误差 0.82 px　置信度 98.4%</text>
-
-<!-- DMD card -->
-<rect x="1035" y="158" width="607" height="457" rx="9" fill="#fbfdff" stroke="#d8e7f2"/>
-<text x="1057" y="190" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="18" font-weight="700" fill="#102b5c">DMD 像素矩阵</text>
-<rect x="1057" y="201" width="117" height="24" rx="12" fill="#f0e6ff"/><text x="1073" y="218" font-family="Arial,sans-serif" font-size="12" fill="#7a35c6">4000 × 2464</text>
-<text x="1186" y="217" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="12" fill="#5e7893">有效 79.3% · 概览聚合</text>
-<rect x="1448" y="198" width="75" height="27" rx="5" fill="#fff" stroke="#c0d4e6"/><text x="1459" y="217" font-family="Arial,sans-serif" font-size="12" fill="#102b5c">x,y 跳转</text>
-<rect x="1530" y="198" width="26" height="27" rx="5" fill="#fff" stroke="#c0d4e6"/><text x="1537" y="217" font-family="Arial,sans-serif" font-size="15" fill="#126cf3">＋</text>
-<rect x="1561" y="198" width="26" height="27" rx="5" fill="#fff" stroke="#c0d4e6"/><text x="1569" y="217" font-family="Arial,sans-serif" font-size="15" fill="#126cf3">−</text>
-<rect x="1592" y="198" width="40" height="27" rx="5" fill="#fff" stroke="#c0d4e6"/><text x="1599" y="217" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="11" fill="#102b5c">适应</text>
-<rect x="1057" y="236" width="565" height="313" rx="5" fill="url(#grid)" stroke="#b9cddd"/>
-<path d="M1075 252H1604V533H1075Z" fill="url(#dmdMask)" opacity=".85"/><path d="M1075 252H1604V533H1075Z" fill="none" stroke="#8b48d1" stroke-width="2"/>
-<rect x="1075" y="252" width="69" height="42" fill="url(#invalid)"/><rect x="1529" y="491" width="75" height="42" fill="url(#invalid)"/>
-<rect x="1242" y="371" width="14" height="14" fill="#f1f3f5"/><rect x="1434" y="432" width="14" height="14" fill="#f1f3f5"/>
-<rect x="1327" y="390" width="16" height="16" fill="#ff9d3f" stroke="#ec6b00" stroke-width="2"/><rect x="1324" y="387" width="22" height="22" fill="none" stroke="#fff" stroke-width="2"/>
-<rect x="1381" y="302" width="109" height="76" rx="5" fill="#fff" stroke="#8b48d1" stroke-width="2"/><rect x="1392" y="313" width="87" height="54" fill="#dfc9f6"/><path d="M1392 313h87v54h-87z" fill="none" stroke="#8b48d1"/><rect x="1428" y="333" width="13" height="13" fill="#ff9d3f" stroke="#ec6b00" stroke-width="2"/><text x="1392" y="391" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="10" fill="#5e7893">3×3 局部放大镜</text>
-<text x="1057" y="575" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="12" fill="#5e7893">视口 x=720–3280，y=438–2026　滚轮缩放 · 拖拽平移 · 点击反算真实像素</text>
-<text x="1057" y="596" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="12" fill="#102b5c">当前 (1417,812)　↔ SLM (1452,704)　误差 0.82 px　对应 1 个像素</text>
-
-<!-- separate lower verification areas -->
-<rect x="390" y="641" width="1268" height="247" rx="12" fill="#fff" stroke="#d5e6f2" filter="url(#shadow)"/>
-
-<!-- alignment verification card -->
-<rect x="406" y="657" width="598" height="215" rx="8" fill="#fbfdff" stroke="#d5e6f2"/>
-<text x="428" y="687" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="17" font-weight="700" fill="#102b5c">◎  对齐验证</text>
-<text x="562" y="687" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="11" fill="#5e7893">当前对齐 LUT：v3</text>
-<rect x="870" y="668" width="116" height="28" rx="5" fill="#fff" stroke="#126cf3"/><text x="883" y="686" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="11" fill="#126cf3">✓  验证当前 LUT</text>
-<path d="M428 703H982" stroke="#deebf4"/>
-<text x="428" y="727" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="11" fill="#5e7893">模型</text><text x="466" y="727" font-family="Arial,sans-serif" font-size="11" fill="#102b5c">Homography</text>
-<text x="590" y="727" font-family="Arial,sans-serif" font-size="11" fill="#5e7893">Δx/Δy</text><text x="636" y="727" font-family="Arial,sans-serif" font-size="11" fill="#102b5c">−37 / +92 px</text>
-<text x="770" y="727" font-family="Arial,sans-serif" font-size="11" fill="#5e7893">θ</text><text x="790" y="727" font-family="Arial,sans-serif" font-size="11" fill="#102b5c">−0.32°</text>
-<text x="866" y="727" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="11" fill="#5e7893">重叠率</text><text x="910" y="727" font-family="Arial,sans-serif" font-size="11" fill="#102b5c">97.8%</text>
-<text x="428" y="754" font-family="Arial,sans-serif" font-size="11" fill="#5e7893">RMSE/P95</text><text x="490" y="754" font-family="Arial,sans-serif" font-size="11" fill="#102b5c">0.82 / 1.44 px</text>
-<text x="640" y="754" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="11" fill="#5e7893">有效率</text><text x="684" y="754" font-family="Arial,sans-serif" font-size="11" fill="#102b5c">82.6% / 79.3%</text>
-<text x="834" y="754" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="11" fill="#5e7893">置信度</text><text x="880" y="754" font-family="Arial,sans-serif" font-size="11" fill="#102b5c">98.4%</text>
-<rect x="428" y="781" width="78" height="24" rx="12" fill="#e3f8eb"/><text x="445" y="797" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="11" fill="#16844e">验证通过</text>
-<text x="530" y="797" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="11" fill="#5e7893">版本 v3 · 最近验证 14:21:15</text>
-<text x="428" y="840" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="10" fill="#5e7893">只验证当前 LUT，不修改映射表；失败时保留已应用版本并标记“需复验”</text>
-
-<!-- light-field verification card -->
-<rect x="1016" y="657" width="626" height="215" rx="8" fill="#fbfdff" stroke="#d5e6f2"/>
-<text x="1038" y="687" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="17" font-weight="700" fill="#102b5c">▧  光场分布验证</text>
-<text x="1200" y="687" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="11" fill="#5e7893">重叠 ROI · QCMOS · 128 帧</text>
-<rect x="1481" y="668" width="142" height="28" rx="5" fill="#126cf3"/><text x="1494" y="686" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="11" fill="#fff">▣  生成光场图</text>
-<rect x="1038" y="703" width="218" height="145" rx="4" fill="url(#heat)"/>
-<ellipse cx="1142" cy="772" rx="64" ry="22" fill="#ffe654" opacity=".48"/><ellipse cx="1071" cy="730" rx="24" ry="14" fill="#e03a49" opacity=".72"/><ellipse cx="1214" cy="822" rx="22" ry="12" fill="#203fb8" opacity=".76"/><path d="M1045 831H1245M1055 713V838" stroke="#fff" opacity=".7"/><path d="M1142 760v24M1130 772h24" stroke="#fff" stroke-width="2"/>
-<rect x="1265" y="703" width="8" height="145" fill="url(#bar)"/><text x="1278" y="711" font-family="Arial,sans-serif" font-size="9" fill="#5e7893">1.0</text><text x="1278" y="848" font-family="Arial,sans-serif" font-size="9" fill="#5e7893">0</text>
-<text x="1038" y="860" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="9" fill="#5e7893">白色十字：当前选中像素 · 固定色阶</text>
-<text x="1300" y="722" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="11" fill="#5e7893">均值 μ</text><text x="1340" y="722" font-family="Arial,sans-serif" font-size="11" fill="#102b5c">0.812</text>
-<text x="1390" y="722" font-family="Arial,sans-serif" font-size="11" fill="#5e7893">σ</text><text x="1407" y="722" font-family="Arial,sans-serif" font-size="11" fill="#102b5c">0.029</text>
-<text x="1455" y="722" font-family="Arial,sans-serif" font-size="11" fill="#5e7893">CV</text><text x="1478" y="722" font-family="Arial,sans-serif" font-size="11" fill="#102b5c">3.6%</text>
-<text x="1530" y="722" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="11" fill="#5e7893">均匀度</text><text x="1576" y="722" font-family="Arial,sans-serif" font-size="11" fill="#102b5c">90.8%</text>
-<text x="1300" y="750" font-family="Arial,sans-serif" font-size="11" fill="#5e7893">P5/P95</text><text x="1350" y="750" font-family="Arial,sans-serif" font-size="11" fill="#102b5c">0.76 / 0.87</text>
-<text x="1470" y="750" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="11" fill="#5e7893">暗区</text><text x="1502" y="750" font-family="Arial,sans-serif" font-size="11" fill="#102b5c">1.8%</text>
-<text x="1300" y="778" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="11" fill="#5e7893">最小/最大</text><text x="1362" y="778" font-family="Arial,sans-serif" font-size="11" fill="#102b5c">0.74 / 0.89</text>
-<text x="1500" y="778" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="11" fill="#5e7893">饱和</text><text x="1532" y="778" font-family="Arial,sans-serif" font-size="11" fill="#102b5c">0.2%</text>
-<rect x="1300" y="802" width="70" height="23" rx="12" fill="#e3f8eb"/><text x="1315" y="818" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="11" fill="#16844e">通过</text>
-<text x="1385" y="818" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="11" fill="#5e7893">CV 阈值 ≤ 5% · 采集 14:21:15</text>
-<text x="1300" y="842" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="10" fill="#5e7893">采集数据独立保存，不修改对齐 LUT</text>
-
-<!-- status bar -->
+<!-- SLM matrix card -->
+<rect x="375" y="127" width="628" height="341" rx="8" fill="#fbfdff" stroke="#d7e7f2"/>
+<text x="397" y="159" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="18" font-weight="700" fill="#102b5c">▥  SLM 像素矩阵</text>
+<rect x="397" y="168" width="118" height="25" rx="13" fill="#e5f0ff"/>
+<text x="413" y="185" font-family="Arial,sans-serif" font-size="12" fill="#126cf3">4096 × 2160</text>
+<text x="529" y="185" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="12" fill="#5e7893">有效 82.6% · LUT 映射</text>
+<rect x="834" y="166" width="72" height="28" rx="5" fill="#fff" stroke="#c2d5e6"/><text x="845" y="185" font-family="Arial,sans-serif" font-size="12" fill="#173768">x,y 跳转</text>
+<rect x="912" y="166" width="28" height="28" rx="5" fill="#fff" stroke="#c2d5e6"/><text x="920" y="185" font-family="Arial,sans-serif" font-size="15" fill="#126cf3">＋</text>
+<rect x="946" y="166" width="28" height="28" rx="5" fill="#fff" stroke="#c2d5e6"/><text x="955" y="185" font-family="Arial,sans-serif" font-size="15" fill="#126cf3">−</text>
+<rect x="980" y="166" width="14" height="28" rx="5" fill="#fff" stroke="#c2d5e6"/>
+<rect x="397" y="205" width="594" height="231" rx="5" fill="#f2f6f9" stroke="#b9cddd"/>
+<rect x="407" y="220" width="574" height="210" fill="url(#slmGrid)" clip-path="url(#slmClip)"/>
+<path d="M407 220H981V430H407Z" fill="none" stroke="#338cf5" stroke-width="2"/>
+<rect x="407" y="220" width="67" height="39" fill="url(#invalid)"/>
+<rect x="902" y="391" width="79" height="39" fill="url(#invalid)"/>
+<g clip-path="url(#slmClip)">
+  <rect x="664" y="352" width="11" height="11" fill="#f7f8f9"/>
+  <rect x="759" y="396" width="11" height="11" fill="#f7f8f9"/>
+  <rect x="674" y="363" width="18" height="18" fill="#ff9637" stroke="#e86c00" stroke-width="2"/>
+  <rect x="671" y="360" width="24" height="24" fill="none" stroke="#fff" stroke-width="2"/>
+  <rect x="748" y="274" width="104" height="70" rx="5" fill="#fff" stroke="#126cf3" stroke-width="2"/>
+  <rect x="758" y="284" width="84" height="50" fill="#c1dcfa" stroke="#4d9cff"/>
+  <rect x="793" y="301" width="15" height="15" fill="#ff9637" stroke="#e86c00" stroke-width="2"/>
 </g>
-<path d="M0 905H1672" stroke="#cddfea"/>
-<text x="24" y="929" font-family="Arial,sans-serif" font-size="12" fill="#5e7893">OptiQubo　v1.0.0　|　基于光学计算的组合优化求解平台</text>
-<text x="1208" y="929" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="12" fill="#5e7893">设备：已连接　|　温度：25.3 ℃　|　USB 已连接　|　DMD ●　SLM ●　QCMOS ●</text>
+<text x="758" y="356" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="10" fill="#5e7893">3×3 局部放大</text>
+<text x="397" y="455" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="11" fill="#5e7893">视口 x=768–3328，y=384–1776　滚轮缩放 · 拖拽平移 · 点击反算像素</text>
+
+<!-- DMD matrix card -->
+<rect x="1018" y="127" width="624" height="341" rx="8" fill="#fbfdff" stroke="#d7e7f2"/>
+<text x="1040" y="159" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="18" font-weight="700" fill="#102b5c">▥  DMD 像素矩阵</text>
+<rect x="1040" y="168" width="118" height="25" rx="13" fill="#f0e6ff"/>
+<text x="1056" y="185" font-family="Arial,sans-serif" font-size="12" fill="#7a35c6">4000 × 2464</text>
+<text x="1173" y="185" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="12" fill="#5e7893">有效 79.3% · LUT 映射</text>
+<rect x="1472" y="166" width="72" height="28" rx="5" fill="#fff" stroke="#c2d5e6"/><text x="1483" y="185" font-family="Arial,sans-serif" font-size="12" fill="#173768">x,y 跳转</text>
+<rect x="1550" y="166" width="28" height="28" rx="5" fill="#fff" stroke="#c2d5e6"/><text x="1558" y="185" font-family="Arial,sans-serif" font-size="15" fill="#126cf3">＋</text>
+<rect x="1584" y="166" width="28" height="28" rx="5" fill="#fff" stroke="#c2d5e6"/><text x="1593" y="185" font-family="Arial,sans-serif" font-size="15" fill="#126cf3">−</text>
+<rect x="1029" y="205" width="594" height="231" rx="5" fill="#f2f6f9" stroke="#b9cddd"/>
+<rect x="1040" y="220" width="574" height="210" fill="url(#dmdGrid)" clip-path="url(#dmdClip)"/>
+<path d="M1040 220H1614V430H1040Z" fill="none" stroke="#8a4bd0" stroke-width="2"/>
+<rect x="1040" y="220" width="67" height="39" fill="url(#invalid)"/>
+<rect x="1535" y="391" width="79" height="39" fill="url(#invalid)"/>
+<g clip-path="url(#dmdClip)">
+  <rect x="1290" y="352" width="11" height="11" fill="#f7f8f9"/>
+  <rect x="1400" y="396" width="11" height="11" fill="#f7f8f9"/>
+  <rect x="1292" y="363" width="18" height="18" fill="#ff9637" stroke="#e86c00" stroke-width="2"/>
+  <rect x="1289" y="360" width="24" height="24" fill="none" stroke="#fff" stroke-width="2"/>
+  <rect x="1360" y="274" width="104" height="70" rx="5" fill="#fff" stroke="#8a4bd0" stroke-width="2"/>
+  <rect x="1370" y="284" width="84" height="50" fill="#dfc9f6" stroke="#9a5be0"/>
+  <rect x="1405" y="301" width="15" height="15" fill="#ff9637" stroke="#e86c00" stroke-width="2"/>
+</g>
+<text x="1370" y="356" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="10" fill="#5e7893">3×3 局部放大</text>
+<text x="1040" y="455" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="11" fill="#5e7893">视口 x=720–3280，y=438–2026　滚轮缩放 · 拖拽平移 · 点击反算像素</text>
+
+<!-- lower results card -->
+<rect x="356" y="495" width="1304" height="393" rx="12" fill="#fff" stroke="#d7e7f2"/>
+
+<!-- alignment validation -->
+<rect x="375" y="550" width="628" height="320" rx="8" fill="#fbfdff" stroke="#d7e7f2"/>
+<text x="397" y="581" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="18" font-weight="700" fill="#102b5c">◎  对齐验证</text>
+<text x="527" y="581" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="11" fill="#5e7893">当前 LUT：v3</text>
+<rect x="862" y="562" width="119" height="29" rx="5" fill="#fff" stroke="#126cf3"/><text x="875" y="581" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="11" fill="#126cf3">✓  验证当前 LUT</text>
+<path d="M397 596H981" stroke="#deebf4"/>
+<g font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="12">
+  <text x="397" y="623" fill="#5e7893">模型</text><text x="450" y="623" fill="#173768">Homography</text>
+  <text x="625" y="623" fill="#5e7893">Δx / Δy</text><text x="689" y="623" fill="#173768">−37 / +92 px</text>
+  <text x="829" y="623" fill="#5e7893">θ</text><text x="850" y="623" fill="#173768">−0.32°</text>
+  <text x="397" y="660" fill="#5e7893">重叠率</text><text x="450" y="660" fill="#173768">97.8%</text>
+  <text x="625" y="660" fill="#5e7893">RMSE / P95</text><text x="713" y="660" fill="#173768">0.82 / 1.44 px</text>
+  <text x="397" y="697" fill="#5e7893">有效率</text><text x="450" y="697" fill="#173768">82.6% / 79.3%</text>
+  <text x="625" y="697" fill="#5e7893">置信度</text><text x="689" y="697" fill="#173768">98.4%</text>
+</g>
+<path d="M397 716H981" stroke="#deebf4"/>
+<rect x="397" y="736" width="80" height="25" rx="12" fill="#e3f8eb"/><text x="412" y="753" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="11" fill="#16844e">验证通过</text>
+<text x="495" y="753" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="11" fill="#5e7893">版本 v3 · 最近验证 14:21:15</text>
+<text x="397" y="793" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="11" fill="#5e7893">仅验证当前 LUT，不修改映射表；失败时标记“需复验”</text>
+<text x="397" y="827" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="11" fill="#5e7893">校验阈值：重叠率 ≥ 95% · RMSE ≤ 1.5 px</text>
+
+<!-- light field validation -->
+<rect x="1018" y="550" width="624" height="320" rx="8" fill="#fbfdff" stroke="#d7e7f2"/>
+<text x="1040" y="581" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="18" font-weight="700" fill="#102b5c">▧  光场分布验证</text>
+<text x="1197" y="581" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="11" fill="#5e7893">重叠 ROI · QCMOS · 128 帧</text>
+<rect x="1482" y="562" width="141" height="29" rx="5" fill="url(#blueBtn)"/><text x="1495" y="581" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="11" fill="#fff">▣  生成光场图</text>
+<rect x="1040" y="602" width="236" height="189" rx="4" fill="url(#heat)"/>
+<ellipse cx="1140" cy="692" rx="70" ry="26" fill="#ffe65c" opacity=".48"/><ellipse cx="1077" cy="635" rx="28" ry="17" fill="#d83c4d" opacity=".74"/><ellipse cx="1212" cy="757" rx="25" ry="14" fill="#2343b5" opacity=".78"/>
+<path d="M1050 776H1263M1062 613V781" stroke="#fff" opacity=".72"/><path d="M1140 679v27M1127 692h26" stroke="#fff" stroke-width="2"/>
+<rect x="1286" y="602" width="9" height="189" fill="url(#heatBar)"/><text x="1302" y="611" font-family="Arial,sans-serif" font-size="9" fill="#5e7893">1.0</text><text x="1302" y="791" font-family="Arial,sans-serif" font-size="9" fill="#5e7893">0</text>
+<text x="1040" y="813" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="10" fill="#5e7893">白色十字：当前选中像素 · 固定色阶</text>
+<g font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="11">
+  <text x="1325" y="630" fill="#5e7893">均值 μ</text><text x="1370" y="630" fill="#173768">0.812</text>
+  <text x="1440" y="630" fill="#5e7893">σ</text><text x="1460" y="630" fill="#173768">0.029</text>
+  <text x="1510" y="630" fill="#5e7893">CV</text><text x="1534" y="630" fill="#173768">3.6%</text>
+  <text x="1325" y="662" fill="#5e7893">均匀度</text><text x="1380" y="662" fill="#173768">90.8%</text>
+  <text x="1460" y="662" fill="#5e7893">暗区</text><text x="1500" y="662" fill="#173768">1.8%</text>
+  <text x="1325" y="694" fill="#5e7893">P5 / P95</text><text x="1390" y="694" fill="#173768">0.76 / 0.87</text>
+  <text x="1325" y="726" fill="#5e7893">最小 / 最大</text><text x="1400" y="726" fill="#173768">0.74 / 0.89</text>
+  <text x="1460" y="726" fill="#5e7893">饱和</text><text x="1500" y="726" fill="#173768">0.2%</text>
+</g>
+<rect x="1325" y="754" width="70" height="24" rx="12" fill="#e3f8eb"/><text x="1340" y="771" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="11" fill="#16844e">通过</text>
+<text x="1410" y="771" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="11" fill="#5e7893">CV 阈值 ≤ 5% · 采集 14:21:15</text>
+<text x="1325" y="811" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="10" fill="#5e7893">采集数据独立保存，不修改对齐 LUT</text>
 </svg>
 
