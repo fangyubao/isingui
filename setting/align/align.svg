@@ -64,6 +64,7 @@
 <text x="161" y="272" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="16" fill="#102b5c">▣  设备与系统</text>
 
 <!-- page header / actions -->
+<g transform="translate(-34,0)">
 <rect x="390" y="62" width="1268" height="70" rx="12" fill="#fff" stroke="#d5e6f2" filter="url(#shadow)"/>
 <text x="414" y="104" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="21" font-weight="700" fill="#102b5c">▦  SLM / DMD 对齐</text>
 <rect x="644" y="82" width="159" height="27" rx="14" fill="#e3f8eb"/><circle cx="659" cy="95" r="5" fill="#14a44d"/>
@@ -161,6 +162,7 @@
 <text x="1300" y="842" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="10" fill="#5e7893">采集数据独立保存，不修改对齐 LUT</text>
 
 <!-- status bar -->
+</g>
 <path d="M0 905H1672" stroke="#cddfea"/>
 <text x="24" y="929" font-family="Arial,sans-serif" font-size="12" fill="#5e7893">OptiQubo　v1.0.0　|　基于光学计算的组合优化求解平台</text>
 <text x="1208" y="929" font-family="'Noto Sans SC Thin','Microsoft YaHei','Noto Sans CJK SC',Arial,sans-serif" font-size="12" fill="#5e7893">设备：已连接　|　温度：25.3 ℃　|　USB 已连接　|　DMD ●　SLM ●　QCMOS ●</text>
